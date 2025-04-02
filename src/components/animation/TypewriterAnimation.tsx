@@ -66,6 +66,7 @@ const TypewriterAnimation: React.FC = () => {
           width={92}
           height={92}
           priority
+          unoptimized
         />
       </div>
       
