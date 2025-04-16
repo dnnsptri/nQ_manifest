@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&display=swap');
+
+.container {
+  background-color: #021019;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.logo {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  width: 92px;
+  height: 92px;
+}
+
+.content {
+  max-width: 960px;
+  width: 100%;
+  margin-top: -396px;
+  padding: 0 20px;
+}
+
+.textContainer {
+  font-family: 'Albert Sans', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 110%;
+  color: #ECFBFA;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.line {
+  white-space: pre-wrap;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+}
+
+/* Lines 1-2 */
+.line:nth-child(1),
+.line:nth-child(2) {
+  opacity: 0.4;
+}
+
+/* Lines 3-4 */
+.line:nth-child(3),
+.line:nth-child(4) {
+  opacity: 0.5;
+}
+
+/* Lines 5-6 */
+.line:nth-child(5),
+.line:nth-child(6) {
+  opacity: 0.6;
+}
+
+/* Lines 7-8 */
+.line:nth-child(7),
+.line:nth-child(8) {
+  opacity: 0.7;
+}
+
+/* Last two lines (TAO economy and together) */
+.line:nth-last-child(2),
+.line:last-child {
+  opacity: 1;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1.06s infinite;
+  color: #ECFBFA;
+  transform: translateY(2px);
+}
+
+.socialIcons {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.icon {
+  color: #ECFBFA;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.callToAction {
+  color: #ECFBFA;
+  font-family: 'Albert Sans', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+
+.callToActionText {
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #ECFBFA;
+  color: #ECFBFA;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+  height: fit-content;
+}
+
+.primaryButton {
+  background: #ECFBFA;
+  color: #021019;
+}
+
+.button:hover {
+  background: #ECFBFA;
+  color: #021019;
+}
+
+.primaryButton:hover {
+  background: transparent;
+  color: #ECFBFA;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.skipLink {
+  position: fixed;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ECFBFA;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skipLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.skipLink.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ECFBFA;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.footer.visible {
+  opacity: 1;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.footerLink {
+  color: #ECFBFA;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.footerLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.textLink {
+  color: #ECFBFA;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  margin-left: 1.5rem;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 1rem;
+  height: fit-content;
+  display: inline-flex;
+  align-items: center;
+}
+
+.textLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .socialIcons {
+    position: fixed;
+    right: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .content {
+    margin-top: -300px;
+  }
+
+  .textContainer {
+    font-size: 48px;
+  }
+
+  .callToActionText {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    width: 72px;
+    height: 72px;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .content {
+    margin-top: -300px;
+  }
+
+  .textContainer {
+    font-size: 48px;
+    margin-bottom: 36px;
+  }
+
+  .callToActionText {
+    font-size: 20px;
+    margin-bottom: 1.25rem;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .textLink {
+    margin-left: 0;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+
+  .socialIcons {
+    position: fixed;
+    top: auto;
+    bottom: 120px;
+    right: 0;
+    left: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .content {
+    margin-top: -200px;
+  }
+
+  .textContainer {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .callToActionText {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    margin-top: 1rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .socialIcons {
+    bottom: 140px;
+    gap: 1.5rem;
+  }
+
+  .icon {
+    transform: scale(0.9);
+  }
+
+  .skipLink {
+    font-size: 12px;
+  }
+
+  .footer {
+    font-size: 12px;
+    bottom: 24px;
+  }
+} 
