@@ -19,7 +19,7 @@ const text = [
   "The best research",
   "And real-world adoption for Bittensor subnets.",
   " ",
-  "Stake with us and be part of the movement",
+  "Stake with us and be part of the movement"
 ];
 
 const TypewriterAnimation: React.FC = () => {
@@ -77,10 +77,10 @@ const TypewriterAnimation: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.logo}>
         <Image
-          src="/images/nQ_icon.gif"
+          src="/images/logo_Neuralteq.gif"
           alt="NeuralTeq Logo"
-          width={92}
-          height={92}
+          width={140}
+          height={72}
           priority
           unoptimized
         />
@@ -109,7 +109,6 @@ const TypewriterAnimation: React.FC = () => {
             <div className={styles.buttons}>
               <button className={`${styles.button} ${styles.primaryButton}`}>stake now</button>
               <button className={styles.button}>validator</button>
-              <a href="#" className={styles.textLink}>Straight to the homepage</a>
             </div>
           </div>
         )}
@@ -144,13 +143,6 @@ const TypewriterAnimation: React.FC = () => {
           <FaMedium size={24} />
         </a>
       </div>
-
-      <a 
-        href="https://www.dennispetri.nl" 
-        className={`${styles.skipLink} ${isComplete ? styles.hidden : ''}`}
-      >
-        Skip this, go directly to the Neuralteq homepage
-      </a>
 
       <footer className={`${styles.footer} ${isComplete ? styles.visible : ''}`}>
         <div className={styles.footerLinks}>
