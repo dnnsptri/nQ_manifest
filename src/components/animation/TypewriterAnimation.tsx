@@ -19,7 +19,7 @@ const text = [
   "The best research",
   "And real-world adoption for Bittensor subnets.",
   " ",
-  "Stake with us and be part of the movement"
+  "Stake with us and be part of the movement_"
 ];
 
 const TypewriterAnimation: React.FC = () => {
@@ -60,7 +60,7 @@ const TypewriterAnimation: React.FC = () => {
         setIsComplete(true);
         clearInterval(typingInterval);
       }
-    }, 25); // Reduced from 50ms to 25ms for 2x speed
+    }, 25);
 
     return () => clearInterval(typingInterval);
   }, [currentLine, currentChar]);
@@ -107,8 +107,8 @@ const TypewriterAnimation: React.FC = () => {
           <div className={styles.callToAction}>
             <p className={styles.callToActionText}>Let's get down to business and jump straight into:</p>
             <div className={styles.buttons}>
-              <button className={`${styles.button} ${styles.primaryButton}`}>stake now</button>
-              <button className={styles.button}>validator</button>
+              <button className={`${styles.button} ${styles.primaryButton}`}>Stake Now</button>
+              <button className={styles.button}>Validator</button>
               <a href="#" className={styles.textLink}>Homepage</a>
             </div>
           </div>
