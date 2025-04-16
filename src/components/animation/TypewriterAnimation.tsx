@@ -30,7 +30,20 @@ const TypewriterAnimation: React.FC = () => {
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
+    const startTime = Date.now();
+    const maxDuration = 5000; // 5 seconds maximum
+
     const typingInterval = setInterval(() => {
+      const elapsedTime = Date.now() - startTime;
+      
+      // Force complete if we're approaching max duration
+      if (elapsedTime >= maxDuration) {
+        setDisplayText(text);
+        setIsComplete(true);
+        clearInterval(typingInterval);
+        return;
+      }
+
       if (currentLine < text.length) {
         if (currentChar < text[currentLine].length) {
           setDisplayText(prev => {
@@ -47,7 +60,7 @@ const TypewriterAnimation: React.FC = () => {
         setIsComplete(true);
         clearInterval(typingInterval);
       }
-    }, 50);
+    }, 25); // Reduced from 50ms to 25ms for 2x speed
 
     return () => clearInterval(typingInterval);
   }, [currentLine, currentChar]);
