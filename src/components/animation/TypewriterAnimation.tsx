@@ -109,6 +109,7 @@ const TypewriterAnimation: React.FC = () => {
             <div className={styles.buttons}>
               <button className={`${styles.button} ${styles.primaryButton}`}>stake now</button>
               <button className={styles.button}>validator</button>
+              <a href="#" className={styles.textLink}>Homepage</a>
             </div>
           </div>
         )}
